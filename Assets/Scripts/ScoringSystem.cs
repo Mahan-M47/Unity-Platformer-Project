@@ -19,6 +19,14 @@ public class ScoringSystem : MonoBehaviour
             manager.Score();
             Destroy(hit.collider.gameObject);
         }
+    }
 
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.CompareTag("Pickup"))
+        {
+            manager.Score();
+            Destroy(collider.gameObject);
+        }
     }
 }

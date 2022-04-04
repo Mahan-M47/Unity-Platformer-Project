@@ -178,10 +178,10 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490740195613980823}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5812563
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-1213544527022299409
 MonoBehaviour:
@@ -319,7 +319,7 @@ Transform:
   m_GameObject: {fileID: 1490740195953877639}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children: []
   m_Father: {fileID: 1490740195613980820}
   m_RootOrder: 0
