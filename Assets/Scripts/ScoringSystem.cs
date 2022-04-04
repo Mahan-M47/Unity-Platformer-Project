@@ -1,36 +1,24 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ScoringSystem : MonoBehaviour
 {
-    public GameObject pickup;
-    public int pickupCount;
-    public float xRange, zRange, yRange;
-
-    public static int score = 0;
-    private int oldScore = 0;
+    public GameObject gameManager;
+    private Manager manager;
 
     void Start()
     {
-        for(int i = 0; i < pickupCount; i++)
-        {
-            float x = Random.Range(-xRange, xRange);
-            float z = Random.Range(-zRange, zRange);
-            float y = Random.Range(0.1f, yRange);
-
-            Vector3 position = new Vector3(x, y, z);
-            Instantiate(pickup, position, Quaternion.identity);
-        }
-        
+        manager = gameManager.GetComponent<Manager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (score != oldScore)
+        if (hit.collider.CompareTag("Pickup"))
         {
-            Debug.Log(score.ToString());
+            manager.Score();
+            Destroy(hit.collider.gameObject);
         }
 
-        oldScore = score;  
     }
 }
