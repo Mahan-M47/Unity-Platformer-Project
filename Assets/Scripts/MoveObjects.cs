@@ -18,11 +18,15 @@ public class MoveObjects : MonoBehaviour
         if (hit.collider.gameObject.CompareTag("MoveableObj"))
         {
             Rigidbody colliderRB = hit.collider.attachedRigidbody;
-            Vector3 forceDirection = hit.gameObject.transform.position - transform.position;
-            forceDirection.y = 0;
-            forceDirection.Normalize();
+            Vector3 forceDirection = hit.transform.position - transform.position;
 
-            colliderRB.AddForceAtPosition(forceDirection * forceMagnitude, transform.position, ForceMode.Impulse);
+            forceDirection.Normalize();
+            forceDirection.y = 0;
+
+            if (transform.position.y < hit.transform.position.y)
+            {
+                colliderRB.AddForce(forceDirection * forceMagnitude, ForceMode.Impulse);
+            }
         }
     }
 }

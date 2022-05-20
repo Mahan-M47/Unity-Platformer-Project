@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(sceneName);
+        Debug.Log("Starting Game");
     }
 
     public void QuitGame()

@@ -12,14 +12,14 @@ public class ScoringSystem : MonoBehaviour
         manager = gameManager.GetComponent<Manager>();
     }
 
-    void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        if (hit.collider.CompareTag("Pickup"))
-        {
-            manager.Score();
-            Destroy(hit.collider.gameObject);
-        }
-    }
+    //void OnControllerColliderHit(ControllerColliderHit hit)
+    //{
+    //    if (hit.collider.CompareTag("Pickup"))
+    //    {
+    //        manager.Score();
+    //        Destroy(hit.collider.gameObject);
+    //    }
+    //}
 
     private void OnTriggerEnter(Collider collider)
     {

@@ -68,6 +68,7 @@ public class Manager : MonoBehaviour
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
         menuUI.SetActive(true);
+        Debug.Log("Pause");
     }
 
     private void UnpauseGame()
@@ -75,6 +76,7 @@ public class Manager : MonoBehaviour
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
         menuUI.SetActive(false);
+        Debug.Log("Unpause");
     }
 
     public void Score()
@@ -88,7 +90,10 @@ public class Manager : MonoBehaviour
             scoreText.text = "YOU WON!";
             AudioManager.PlayWinSound();
             PauseGame();
+            Debug.Log("Win");
         }
+
+        Debug.Log("Score");
     }
 
     public void PlayAgainButtonClickHandler()

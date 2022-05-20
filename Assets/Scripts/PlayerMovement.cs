@@ -70,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
             speedY += jumpSpeed;
             isJumping = true;
             AudioManager.PlayJumpSound();
+            Debug.Log("Jump");
         }
 
         Vector3 verticalMovement = Vector3.up * speedY;
