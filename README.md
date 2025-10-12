@@ -2,7 +2,7 @@
 
 ### About the Game
 
-This project contains A simple 3D platformer game made with Unity. At the start of the game, a number of pickups spawn in random places of the map. The goal is to catch every single pickup by walking or jumping through them. This project was originally created for my Computer Graphics course in Spring 2022.
+This project contains A simple 3D platformer game made with Unity. At the start of the game, a number of pickups spawn in random places of the map. The goal is to catch every single pickup by walking or jumping through them. This project was originally created for my Computer Graphics course at SBU.
 
 
 ### Gameplay
